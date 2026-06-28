@@ -295,49 +295,7 @@
     p:last-child { margin-bottom: 0; }
 
 
-    /* ====================================================
-       SESSION CARDS (Online / Group / Home / Corporate)
-       ====================================================
-       A 4-column grid of clickable cards.
-       "auto-fit, minmax(200px, 1fr)" means:
-         each card is at least 200px wide, but shares
-         space equally — automatically wraps on mobile.
-    */
-    .session-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;              /* gap shows the --linen background as grid lines */
-      background: var(--linen);
-      border: 1px solid var(--linen);
-      margin-top: 2rem;
-    }
-
-    /* Individual card */
-    .session-card {
-      background: var(--white);
-      padding: 1.5rem 1.25rem;
-      transition: background 0.2s;
-    }
-    .session-card:hover { background: var(--sage-lt); } /* light green on hover */
-    .session-card a { display: block; height: 100%; }   /* whole card is clickable */
-
-    /* Emoji icon at top of each card */
-    .session-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
-
-    /* Card title e.g. "Online" */
-    .session-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--earth);
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-
-    /* Card description text */
-    .session-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
-
-
-
+    
 
     /* ====================================================
        INSTRUCTOR / ABOUT SECTION
@@ -381,41 +339,7 @@
     }
 
 
-    /* ====================================================
-       CONNECT / LINKS SECTION
-       ====================================================
-       List of clickable rows for social media, blog, etc.
-       Each row has an icon on the left and label text.
-    */
-    .link-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem; /* CHANGE: space between link rows */
-      margin-top: 1.5rem;
-    }
-
-    /* Individual link row */
-    .link-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--linen);
-      border-radius: 1px;
-      font-size: 0.8rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-    }
-    .link-row:hover {
-      border-color: var(--sage);
-      color: var(--sage);
-      background: var(--sage-lt);
-    }
-    .link-row svg { flex-shrink: 0; opacity: 0.55; }
-    .link-row:hover svg { opacity: 1; }
-
+  
 
     /* ====================================================
        CONTACT BLOCK (bottom section before footer)
