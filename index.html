@@ -1,5 +1,6 @@
 <!--
-Prompt: Make the Anurag personal one-page website more classy, elegant and beautiful.
+Prompt: Write the whole code for the compact, classy Anurag personal website,
+keeping the large capital first alphabet/drop cap in the bio.
 Indian Date: 08 August 2026
 -->
 
@@ -7,6 +8,7 @@ Indian Date: 08 August 2026
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,24 +16,23 @@ Indian Date: 08 August 2026
 
   <style>
 
-    /* ==============================
-       MAIN COLORS & SETTINGS
-       Change these to change the look
-    ============================== */
+    /* =========================
+       COLORS
+    ========================= */
 
     :root {
-      --background: #faf9f5;
-      --text: #3f4541;
+      --bg: #faf9f5;
+      --text: #484e49;
       --heading: #294b3a;
-      --green: #6f927d;
-      --light-green: #8cab98;
-      --line: #e3e6e1;
+      --green: #73917f;
+      --line: #e1e3de;
+      --soft: #f2f3ee;
     }
 
 
-    /* ==============================
+    /* =========================
        BASIC
-    ============================== */
+    ========================= */
 
     * {
       box-sizing: border-box;
@@ -43,210 +44,208 @@ Indian Date: 08 August 2026
 
     body {
       margin: 0;
-      background: var(--background);
+      background: var(--bg);
       color: var(--text);
+
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     .page {
-      max-width: 720px;
+      max-width: 700px;
       margin: auto;
-      padding: 80px 28px 50px;
+      padding: 30px 24px;
     }
 
 
-    /* ==============================
+    /* =========================
        HEADER
-    ============================== */
+    ========================= */
 
     header {
       text-align: center;
-      padding: 35px 0 70px;
-    }
-
-    .lotus {
-      font-size: 1.6rem;
-      margin-bottom: 12px;
+      padding: 15px 0 28px;
     }
 
     h1 {
       margin: 0;
+
       color: var(--heading);
-      font-size: 3.4rem;
+
+      font-size: 2.8rem;
       font-weight: 400;
       letter-spacing: 3px;
     }
 
     .subtitle {
-      margin: 8px 0 25px;
-      color: #7a817c;
-      font-size: 1.05rem;
+      margin: 3px 0 12px;
+
+      color: #7c837e;
+
+      font-size: 1rem;
       font-style: italic;
-      letter-spacing: 1px;
     }
 
 
-    /* ==============================
+    /* =========================
        SECTIONS
-    ============================== */
+    ========================= */
 
     section {
-      padding: 38px 0;
+      padding: 27px 0;
       border-top: 1px solid var(--line);
     }
 
     h2 {
-      margin: 0 0 18px;
+      margin: 0 0 12px;
+
       color: var(--heading);
-      font-size: 1.15rem;
+
+      font-size: 1.08rem;
       font-weight: 500;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
     }
 
     p {
-      margin: 0 0 12px;
-      font-size: 1.04rem;
+      margin: 0 0 9px;
     }
 
 
-    /* ==============================
+    /* =========================
+       LATEST
+    ========================= */
+
+    .latest {
+      background: var(--soft);
+
+      padding: 20px 22px;
+
+      border-radius: 4px;
+    }
+
+
+    /* =========================
+       BIO
+    ========================= */
+
+    .bio {
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    /* Large elegant first letter */
+
+    .bio::first-letter {
+      float: left;
+
+      color: var(--heading);
+
+      font-size: 3.4rem;
+      font-weight: 400;
+      line-height: 0.8;
+
+      margin: 7px 8px 0 0;
+    }
+
+
+    /* =========================
        LINKS
-    ============================== */
+    ========================= */
 
     a {
       color: var(--green);
       text-decoration: none;
-      transition: 0.2s ease;
+
+      transition: color 0.2s ease;
     }
 
     a:hover {
       color: var(--heading);
     }
 
-    .text-link {
+    .simple-link {
       display: inline-block;
-      border-bottom: 1px solid #b9c9bf;
+
       padding-bottom: 2px;
+
+      border-bottom: 1px solid #afc0b5;
     }
 
-    .text-link:hover {
+    .simple-link:hover {
       border-color: var(--heading);
     }
 
 
-    /* ==============================
-       SOCIAL & CONTACT LINKS
-    ============================== */
+    /* Social / Contact links */
 
-    .link-list {
+    .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 28px;
-    }
 
-    .link-list a {
-      position: relative;
-      padding-bottom: 3px;
-    }
-
-    .link-list a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      background: var(--green);
-      transition: width 0.25s ease;
-    }
-
-    .link-list a:hover::after {
-      width: 100%;
+      gap: 10px 28px;
     }
 
 
-    /* ==============================
-       BIO
-    ============================== */
-
-    .bio {
-      font-size: 1.08rem;
-      line-height: 1.9;
-    }
-
-
-    /* ==============================
+    /* =========================
        FOOTER
-    ============================== */
+    ========================= */
 
     footer {
+      padding: 25px 0 8px;
+
       border-top: 1px solid var(--line);
-      margin-top: 15px;
-      padding: 32px 0 10px;
 
       display: flex;
       justify-content: space-between;
 
       font-size: 0.9rem;
-      letter-spacing: 0.5px;
     }
 
 
-    /* ==============================
-       SMALL ENTRANCE ANIMATION
-    ============================== */
-
-    header,
-    section,
-    footer {
-      animation: fadeIn 0.7s ease both;
-    }
-
-    @keyframes fadeIn {
-
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-
-    /* ==============================
+    /* =========================
        MOBILE
-    ============================== */
+    ========================= */
 
     @media (max-width: 600px) {
 
       .page {
-        padding: 50px 22px 35px;
+        padding: 18px 20px 25px;
       }
 
       header {
-        padding: 25px 0 55px;
+        padding: 8px 0 20px;
       }
 
       h1 {
-        font-size: 2.7rem;
+        font-size: 2.35rem;
+      }
+
+      .subtitle {
+        margin: 1px 0 8px;
+        font-size: 0.95rem;
       }
 
       section {
-        padding: 32px 0;
+        padding: 21px 0;
+      }
+
+      .latest {
+        padding: 16px 18px;
       }
 
       .bio {
-        font-size: 1rem;
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .bio::first-letter {
+        font-size: 3.2rem;
       }
 
     }
 
   </style>
+
 </head>
 
 
@@ -255,47 +254,57 @@ Indian Date: 08 August 2026
   <main class="page">
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header>
 
       <h1>Anurag</h1>
 
       <div class="subtitle">
-        Spiritual Seeker
+        Spiritual Seeker 🪷
       </div>
 
-      <a class="text-link"
+      <a class="simple-link"
          href="https://anuragpage.github.io/go">
-        🪷 Home page
+        Home page
       </a>
 
     </header>
 
 
 
-    <!-- LATEST -->
+    <!-- =========================
+         LATEST
+    ========================== -->
 
     <section>
 
-      <h2>Latest</h2>
+      <div class="latest">
 
-      <p>
-        Online sessions are also effective.
-      </p>
+        <h2>Latest</h2>
 
-      <a class="text-link"
-         href="https://yogaanurag.blogspot.com/2020/08/online.html"
-         target="_blank"
-         rel="noopener">
-        Read more here →
-      </a>
+        <p>
+          Online sessions are also effective.
+        </p>
+
+        <a class="simple-link"
+           href="https://yogaanurag.blogspot.com/2020/08/online.html"
+           target="_blank"
+           rel="noopener">
+          Read more here →
+        </a>
+
+      </div>
 
     </section>
 
 
 
-    <!-- MY BIO -->
+    <!-- =========================
+         MY BIO
+    ========================== -->
 
     <section>
 
@@ -315,13 +324,15 @@ Indian Date: 08 August 2026
 
 
 
-    <!-- FOLLOW -->
+    <!-- =========================
+         FOLLOW
+    ========================== -->
 
     <section>
 
       <h2>Follow us</h2>
 
-      <div class="link-list">
+      <div class="links">
 
         <a href="https://www.instagram.com/yogaanuragpage"
            target="_blank"
@@ -341,16 +352,19 @@ Indian Date: 08 August 2026
 
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         WHATSAPP / CALL
+    ========================== -->
 
     <section>
 
-      <h2>Contact us</h2>
+      <h2>WhatsApp / Call</h2>
 
-      <div class="link-list">
+      <div class="links">
 
         <a href="https://wa.me/916283266268"
-           target="_blank">
+           target="_blank"
+           rel="noopener">
           WhatsApp ↗
         </a>
 
@@ -364,7 +378,9 @@ Indian Date: 08 August 2026
 
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
@@ -373,7 +389,7 @@ Indian Date: 08 August 2026
       </a>
 
       <a href="#top">
-        Back to top ↑
+        Top ↑
       </a>
 
     </footer>
@@ -382,4 +398,5 @@ Indian Date: 08 August 2026
   </main>
 
 </body>
+
 </html>
