@@ -170,7 +170,9 @@ PAGE TAGLINE
     line-height:1.5;
 }
 
-
+.page-tagline em{
+    font-style: italic;
+}
 
 /*=========================================================
 NAVIGATION
