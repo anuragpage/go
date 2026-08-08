@@ -148,15 +148,6 @@ Instagram
 
 </a>
 
-<span>·</span>
-
-<a
-href="https://www.youtube.com/@yogaanurag"
-target="_blank">
-
-YouTube
-
-</a>
 
 <span>·</span>
 
