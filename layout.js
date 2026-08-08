@@ -40,22 +40,7 @@ const pages = [
     },
 
     {
-        file:"meditation.html",
-        text:"Meditation"
-    },
-
-    {
-        file:"news.html",
-        text:"News"
-    },
-
-    {
-        file:"blog.html",
-        text:"Blog"
-    },
-
-    {
-        file:"contact.html",
+        file:"links.html",
         text:"Contact"
     }
 
