@@ -14,7 +14,8 @@ PAGE TITLE
 const pageTitle =
 document.body.dataset.title || "Anurag";
 
-
+const pageTagline =
+document.body.dataset.tagline || "";
 
 /*=========================================================
 WEBSITE PAGES
@@ -104,6 +105,8 @@ const header =
 ${pageTitle}
 
 </h1>
+
+${pageTagline ? `<p class="page-tagline">${pageTagline}</p>` : ""}
 
 <nav class="nav">
 
