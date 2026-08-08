@@ -147,10 +147,10 @@ const footer =
 <div class="footer-links">
 
 <a
-href="https://www.instagram.com/yogaanuragpage"
+href="https://anuragpage.github.io/go/map.html"
 target="_blank">
 
-Instagram
+Site 
 
 </a>
 
