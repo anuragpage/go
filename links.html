@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Links | Anurag</title>
+
+<meta name="description"
+content="Official websites, social media and contact links of Anurag.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body id="top" data-title="Links">
+
+<div id="site-header"></div>
+
+
+
+<main class="page">
+
+<section>
+
+<p>
+
+Everything in one place.
+
+Explore my official websites, social media profiles,
+YouTube channels and ways to get in touch.
+
+</p>
+
+</section>
+
+
+
+<div id="links-container"></div>
+
+</main>
+
+
+
+<div id="site-footer"></div>
+
+
+
+<script src="config.js"></script>
+<script src="contacts.js"></script>
+<script src="layout.js"></script>
+
+<script>
+
+/* =========================================
+   ICONS & LABELS
+========================================= */
+
+const fields = [
+
+["🌐","Official Website","website"],
+["📖","Blog","blog"],
+["▶️","YouTube","youtube"],
+["📷","Instagram","instagram"],
+["📘","Facebook","facebook"],
+["𝕏","X","x"],
+["💼","LinkedIn","linkedin"],
+["📢","Telegram","telegram"],
+["📧","Email","email"],
+["📞","Phone","phone"],
+["💬","WhatsApp","whatsapp"],
+["💻","GitHub","github"]
+
+];
+
+
+
+/* =========================================
+   DISPLAY TEXT
+========================================= */
+
+function displayText(label,value){
+
+    if(label==="Phone")
+        return value;
+
+    if(label==="Email")
+        return value;
+
+    if(label==="WhatsApp")
+        return "Chat on WhatsApp";
+
+    try{
+
+        return new URL(value)
+        .hostname
+        .replace("www.","");
+
+    }
+
+    catch{
+
+        return value;
+
+    }
+
+}
+
+
+
+/* =========================================
+   LINK
+========================================= */
+
+function link(label,value){
+
+    if(label==="Phone")
+        return "tel:"+value.replace(/\s+/g,"");
+
+    if(label==="Email")
+        return "mailto:"+value;
+
+    return value;
+
+}
+
+
+
+/* =========================================
+   CARD
+========================================= */
+
+function createCard(project){
+
+    let html = `
+
+<section>
+
+<div class="card">
+
+<h2>${project.name}</h2>
+
+`;
+
+    fields.forEach(field=>{
+
+        const icon = field[0];
+
+        const label = field[1];
+
+        const key = field[2];
+
+        const value = project[key];
+
+        if(!value) return;
+
+        html += `
+
+<p>
+
+<strong>${icon} ${label}</strong><br>
+
+<a class="simple-link"
+
+href="${link(label,value)}"
+
+target="_blank"
+
+rel="noopener">
+
+${displayText(label,value)}
+
+</a>
+
+</p>
+
+`;
+
+    });
+
+    html += `
+
+</div>
+
+</section>
+
+`;
+
+    return html;
+
+}
+
+
+
+/* =========================================
+   BUILD PAGE
+========================================= */
+
+const container =
+document.getElementById("links-container");
+
+container.innerHTML +=
+createCard(CONTACT.personal);
+
+container.innerHTML +=
+createCard(CONTACT.yoga);
+
+container.innerHTML +=
+createCard(CONTACT.chess);
+
+
+
+if(CONTACT.projects){
+
+    CONTACT.projects.forEach(project=>{
+
+        container.innerHTML +=
+        createCard(project);
+
+    });
+
+}
+
+
+
+/* =========================================
+   WEBSITE PAGES
+========================================= */
+
+container.innerHTML += `
+
+<section>
+
+<div class="card">
+
+<h2>🌍 Website</h2>
+
+<p>
+
+Quick access to the main sections of this website.
+
+</p>
+
+<div class="links">
+
+<a href="index.html">Anurag Home</a>
+
+<a href="yoga.html">Yoga</a>
+
+<a href="chess.html">Chess</a>
+
+<a href="meditation.html">Meditation</a>
+
+<a href="news.html">News</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="sitemap.html">Site Map</a>
+
+</div>
+
+</div>
+
+</section>
+
+`;
+
+</script>
+
+</body>
+
+</html>
