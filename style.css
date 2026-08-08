@@ -246,7 +246,7 @@ section{
 section:first-of-type{
 
     border-top:none;
-padding-top:5px;
+padding-top:0;
 }
 
 
