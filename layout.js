@@ -17,6 +17,9 @@ document.body.dataset.title || "Anurag";
 const pageTagline =
 document.body.dataset.tagline || "";
 
+const pageEmoji =
+document.body.dataset.emoji || "";
+
 /*=========================================================
 WEBSITE PAGES
 
@@ -106,7 +109,7 @@ ${pageTitle}
 
 </h1>
 
-${pageTagline ? `<p class="page-tagline">${pageTagline}</p>` : ""}
+${pageTagline ? `<p class="page-tagline">${pageEmoji} <em>${pageTagline}</em></p>` : ""}
 
 <nav class="nav">
 
