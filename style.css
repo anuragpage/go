@@ -157,7 +157,18 @@ h1{
 }
 
 
+/*=========================================================
+PAGE TAGLINE
+=========================================================*/
 
+.page-tagline{
+    margin:8px 0 18px;
+    font-size:1rem;
+    font-weight:500;
+    text-align:center;
+    color:#9be28f;
+    line-height:1.5;
+}
 
 
 
